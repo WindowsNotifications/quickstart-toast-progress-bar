@@ -1,0 +1,51 @@
+﻿<Page
+    x:Class="QuickstartToastProgressBar.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:QuickstartToastProgressBar"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <StackPanel Margin="24">
+
+            <TextBlock
+                Text="Quickstart: Toast Progress Bar"
+                Style="{StaticResource TitleTextBlockStyle}"
+                TextWrapping="Wrap"/>
+
+            <RichTextBlock Margin="0,12,0,0">
+                <Paragraph>
+                    This app illustrates how to send a local toast notification that uses a progress bar.
+                </Paragraph>
+                <Paragraph />
+                <Paragraph>For handling toast activation, please see
+                    <Hyperlink NavigateUri="https://blogs.msdn.microsoft.com/tiles_and_toasts/2015/07/08/quickstart-sending-a-local-toast-notification-and-handling-activations-from-it-windows-10/">Quickstart: Sending a local toast notification and handling activations</Hyperlink>.</Paragraph>
+            </RichTextBlock>
+
+            <TextBox
+                x:Name="TextBoxSecondsToDownloadFor"
+                Header="Seconds to &quot;download&quot; for"
+                Text="10"/>
+
+            <Button
+                x:Name="ButtonSendToast"
+                Content="Click to start &quot;download&quot;"
+                Click="ButtonSendToast_Click"
+                HorizontalAlignment="Stretch"
+                Margin="0,12,0,0"/>
+
+            <RichTextBlock Margin="0,12,0,0">
+                <Paragraph>The button above pops a new toast using the local toast API's, and it includes a progress bar. A fake download is kicked off, and the toast is updated using the new update API's to update the progress bar's value.</Paragraph>
+                <Paragraph/>
+                <Paragraph>The "download" should continue to work even after the app is closed, thanks to extended app execution. But if the system decides the app can no longer execute, the toast will update to a "paused" state. Progress bar only works on RS2 or later builds.</Paragraph>
+            </RichTextBlock>
+
+        </StackPanel>
+
+
+
+    </ScrollViewer>
+</Page>
