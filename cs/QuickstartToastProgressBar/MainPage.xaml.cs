@@ -51,7 +51,7 @@ namespace QuickstartToastProgressBar
 <visual>
 <binding template='ToastGeneric'>
 <text>Downloading...</text>
-<progress title='InteractiveToastSample.zip' description='File download' value='{progressValue}' state='{progressState}'/>
+<progress title='InteractiveToastSample.zip' status='File download' value='{progressValue}' valueStringOverride='{progressValueStringOverride}'/>
 </binding>
 </visual>
 </toast>";
@@ -87,7 +87,7 @@ namespace QuickstartToastProgressBar
             var data = new Dictionary<string, string>
             {
                 { "progressValue", "0" },
-                { "progressState", $"{downloadDuration} seconds" }
+                { "progressValueStringOverride", $"{downloadDuration} seconds" }
             };
 
             // And create the toast notification
