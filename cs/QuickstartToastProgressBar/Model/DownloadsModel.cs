@@ -66,7 +66,7 @@ namespace QuickstartToastProgressBar.Model
                 var data = new Dictionary<string, string>
                 {
                     { "progressValue", ProgressValue.ToString() },
-                    { "progressState", $"{(int)SecondsRemaining} seconds" }
+                    { "progressValueStringOverride", $"{(int)SecondsRemaining} seconds" }
                 };
 
                 try
